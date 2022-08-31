@@ -3,9 +3,15 @@ import pymongo
 
 class DB:
 
-    def __init__(self, host, db, collection):
+    def __init__(self, host, db, collection, user=None, password=None):
 
-        self.client = pymongo.MongoClient("mongodb://" + host + ":27017/")
+        MONGODB_TIMEOUT = 1000
+        MONGODB_SOCKETTIMEOUT = 3000
+        if user and password:
+            uri = 'mongodb://' + user + ':' + password + '@' + host + ':27017' + '/Crudo'
+        else:
+            uri = "mongodb://" + host + ":27017/"
+        self.client = pymongo.MongoClient(uri, connectTimeoutMS=MONGODB_TIMEOUT, socketTimeoutMS=MONGODB_SOCKETTIMEOUT)
         self.db = self.client[db]
         self.collection = self.db[collection]
         self.pdf_collection = self.db["pdfs_done"]

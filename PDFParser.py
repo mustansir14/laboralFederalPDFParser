@@ -26,7 +26,7 @@ class PDFParser:
             self.end_date = datetime.strptime(end_date, "%Y/%m/%d")
         else:
             self.end_date = None
-        self.db = DB(DB_HOST, DB_NAME, COLLECTION_NAME)
+        self.db = DB(DB_HOST, DB_NAME, COLLECTION_NAME, DB_USER, DB_PASS)
 
     def start_parse(self, skip_already_done=False):
 

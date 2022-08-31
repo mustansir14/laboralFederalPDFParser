@@ -14,7 +14,9 @@ DIR_TO_STORE_PDF = "pdfs"
 DB_HOST = "localhost"
 DB_NAME = "myDB"
 COLLECTION_NAME = "myCollection"
-
+# if needed
+DB_USER = None
+DB_PASS = None
 
 OUTPUT_JSON_TEMPLATE = {
  "actor" : "",
