@@ -1,5 +1,5 @@
-from PDFDownloader import PDFDownloader
-from PDFParser import PDFParser
+from includes.PDFDownloader import PDFDownloader
+from includes.PDFParser import PDFParser
 from config import *
 import time
 import logging
