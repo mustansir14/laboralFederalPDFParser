@@ -6,7 +6,7 @@ from glob import glob
 import numpy as np
 import json
 import logging
-from DB import DB
+from includes.DB import DB
 import re
 import unidecode
 logging.basicConfig(format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S', level=logging.INFO)
