@@ -13,5 +13,4 @@ while True:
     logging.info("PDFs download done. Starting the parsing now")
     parser = PDFParser(DIR_TO_STORE_PDF, START_DATE, END_DATE)
     parser.start_parse(skip_already_done=True)
-    logging.info("All data parsed and saved to DB. Will continue after 48 hours")
-    time.sleep(172800)
+    logging.info("All data parsed and saved to DB.")
